@@ -5,7 +5,6 @@ function convertToDays(date) {
 
 function solution(today, terms, privacies) {
   var answer = [];
-  // 오늘 날짜
   var todayCount = convertToDays(today);
   for (var i = 0; i < privacies.length; i++) {
     var privacy = privacies[i].split(" ");
