@@ -9,10 +9,8 @@ function getMultiples(number) {
 }
 
 function solution(number, limit, power) {
-    var answer = 0;
-    for (let i = 0; i < number; i++) {
-        let weapon = getMultiples(i + 1);
-        answer += (weapon > limit) ? power : weapon;
-    }
-    return answer;
+  var answer = 0;
+  for (let i = 1; i <= number; i++)
+    answer += getMultiples(i) > limit ? power : getMultiples(i);
+  return answer;
 }
