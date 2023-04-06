@@ -7,5 +7,3 @@ function solution(k, m, score) {
     }
     return answer;
 }
-
-// [4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 1, 1]
