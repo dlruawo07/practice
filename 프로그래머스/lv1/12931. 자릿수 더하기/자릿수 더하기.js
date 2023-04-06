@@ -7,7 +7,5 @@ function solution(n) {
     n = Math.floor(n / 10);
   }
 
-  console.log(answer);
-
   return answer;
 }
