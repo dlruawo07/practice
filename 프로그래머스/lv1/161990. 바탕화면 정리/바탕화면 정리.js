@@ -5,10 +5,8 @@ function solution(wallpaper) {
     for (let i = 0; i < wallpaper.length; i++) {
         var s = wallpaper[i].indexOf('#')
         var e = wallpaper[wallpaper.length - i - 1].lastIndexOf('#');
-        if (s !== -1)
-            lu.push([i, s]);
-        if (e !== -1)
-            rd.push([wallpaper.length - i, e + 1]);
+        if (s !== -1) lu.push([i, s]);
+        if (e !== -1) rd.push([wallpaper.length - i, e + 1]);
     }
     
     var [lux, luy] = [lu[0][0], lu[0][1]];
