@@ -6,11 +6,8 @@ function solution(k, score) {
     array.push(score[i]);
     array.sort((a, b) => a - b);
 
-    if (i < k) {
-      answer.push(Math.min(...array));
-    } else {
-      answer.push(array[array.length - k]);
-    }
+    if (i < k) answer.push(Math.min(...array));
+    else answer.push(array[array.length - k]);
   }
   return answer;
 }
