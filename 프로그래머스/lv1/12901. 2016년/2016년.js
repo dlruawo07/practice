@@ -6,8 +6,6 @@ function solution(a, b) {
     else days += 31;
   }
 
-  console.log(days);
-
   if (days % 7 == 0) return "THU";
   if (days % 7 == 1) return "FRI";
   if (days % 7 == 2) return "SAT";
