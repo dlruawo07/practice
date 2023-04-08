@@ -6,3 +6,10 @@ function solution(s) {
     }
     return count === 0;
 }
+
+function solution(s) {
+    let sp = s.toLowerCase().replace(/p/g, '0').split('').filter(e => e === '0').length;
+    let sy = s.toLowerCase().replace(/y/g, '1').split('').filter(e => e === '1').length;
+
+    return sp === sy;
+}
