@@ -1,15 +1,14 @@
 function solution(participant, completion) {
-    let answer = '';
-    const hashMap = {};
-    for (let comp of completion) {
-        if (hashMap[comp]) hashMap[comp] += 1
-        else hashMap[comp] = 1
-    }
+    let object = {};
     
-    for (let part of participant) {
-        if (!hashMap[part]) answer = part;
-        hashMap[part]--;
-    }
-    
-    return answer;
+    participant.forEach((item) => {
+    if (object[item] === undefined) object[item] = 1;
+    else object[item] += 1;
+  });
+
+  completion.forEach((item) => {
+    if (object[item] !== undefined) object[item] -= 1;
+  });
+
+  for (let key in object) if (object[key] === 1) return key;
 }
