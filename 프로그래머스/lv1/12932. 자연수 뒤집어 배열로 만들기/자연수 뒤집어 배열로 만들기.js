@@ -1,9 +1,9 @@
 function solution(n) {
-    var answer = [];
-    let temp = n;
-    for (let i = 0; i < String(n).length; i++) {
-        answer.push(Math.floor(temp % 10));
-        temp /= 10;
-    }
-    return answer;
+  var answer = [];
+  let len = String(n).length;
+  for (let i = 0; i < len; i++) {
+    answer.push(n % 10);
+    n = Math.floor(n / 10);
+  }
+  return answer;
 }
