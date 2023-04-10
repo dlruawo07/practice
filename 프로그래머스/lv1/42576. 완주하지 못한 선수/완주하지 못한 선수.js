@@ -1,14 +1,11 @@
 function solution(participant, completion) {
-    let object = {};
+  let obj = {};
     
-    participant.forEach((item) => {
-    if (object[item] === undefined) object[item] = 1;
-    else object[item] += 1;
+  participant.forEach((ele) => {
+      obj[ele] = obj[ele] === undefined ? 1 : obj[ele] + 1;
   });
+  completion.forEach((ele) => { obj[ele]-- });
 
-  completion.forEach((item) => {
-    if (object[item] !== undefined) object[item] -= 1;
-  });
-
-  for (let key in object) if (object[key] === 1) return key;
+  for (let key in obj)
+    if (obj[key] === 1) return key;
 }
