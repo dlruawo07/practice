@@ -3,7 +3,6 @@ const onMiddle = (n) => [2, 5, 8, 0].indexOf(n);
 const onRight = (n) => [3, 6, 9, 12].indexOf(n);
 
 function getDist(curr, prev, func) {
-  if (prev === -1) return -1;
   if (func(prev) !== -1) return Math.abs(onMiddle(curr) - func(prev)) + 1;
   else if (onMiddle(prev) !== -1)
     return Math.abs(onMiddle(curr) - onMiddle(prev));
