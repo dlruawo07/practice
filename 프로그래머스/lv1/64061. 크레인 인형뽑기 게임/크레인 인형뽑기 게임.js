@@ -10,11 +10,8 @@ function solution(board, moves) {
         if (basket[basket.length - 1] === target) {
           basket.pop();
           answer += 2;
-          break;
-        } else {
-          basket.push(target);
-          break;
-        }
+        } else basket.push(target);
+        break;
       }
     }
   }
