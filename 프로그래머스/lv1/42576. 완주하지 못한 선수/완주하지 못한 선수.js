@@ -1,11 +1,10 @@
 function solution(participant, completion) {
-  let obj = {};
+    participant.sort();
+    completion.sort();
     
-  participant.forEach((ele) => {
-      obj[ele] = obj[ele] === undefined ? 1 : obj[ele] + 1;
-  });
-  completion.forEach((ele) => { obj[ele]-- });
-
-  for (let key in obj)
-    if (obj[key] === 1) return key;
+    for(let i = 0; i < completion.length; i++) {
+        if(participant[i] !== completion[i]) return participant[i];
+    }
+    
+    return participant[participant.length - 1];
 }
