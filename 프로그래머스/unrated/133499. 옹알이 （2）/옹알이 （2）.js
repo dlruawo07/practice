@@ -3,10 +3,10 @@ function solution(babbling) {
     for (let bab of babbling) {
         let i = 0;
         while(i < bab.length) {
-            if (bab[i] === 'a' && bab[i + 1] === 'y' && bab[i + 2] === 'a' && bab[i + 3] !== 'a') i += 3;
-            else if (bab[i] === 'w' && bab[i + 1] === 'o' && bab[i + 2] === 'o' && bab[i + 3] !== 'w') i += 3;
-            else if (bab[i] === 'y' && bab[i + 1] === 'e' && bab[i + 2] !== 'y') i += 2;
-            else if (bab[i] === 'm' && bab[i + 1] === 'a' && bab[i + 2] !== 'm') i += 2;
+            if (bab.slice(i, i + 3) === "aya" && bab[i + 3] !== 'a') i += 3;
+            else if (bab.slice(i, i + 3) === "woo" && bab[i + 3] !== 'w') i += 3;
+            else if (bab.slice(i, i + 2) === "ye" && bab[i + 2] !== 'y') i += 2;
+            else if (bab.slice(i, i + 2) === "ma" && bab[i + 2] !== 'm') i += 2;
             else break;
         }
         if (i >= bab.length) answer++;
