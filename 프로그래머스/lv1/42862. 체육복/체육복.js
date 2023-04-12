@@ -2,9 +2,11 @@ function solution(n, lost, reserve) {
   let dupArr = lost
     .filter((ele) => reserve.includes(ele))
     .sort((a, b) => a - b);
+    
   let newLost = lost
     .filter((ele) => !dupArr.includes(ele))
     .sort((a, b) => a - b);
+    
   let newReserve = reserve
     .filter((ele) => !dupArr.includes(ele))
     .sort((a, b) => a - b);
