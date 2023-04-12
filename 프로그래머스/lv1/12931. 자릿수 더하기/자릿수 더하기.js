@@ -1,5 +1,8 @@
 function solution(n) {
-  return String(n)
-    .split("")
-    .reduce((acc, cur, i) => acc + Number(cur), 0);
+  let answer = 0;
+  while (n > 0) {
+    answer += n % 10;
+    n = Math.floor(n / 10);
+  }
+  return answer;
 }
