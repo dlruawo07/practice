@@ -1,7 +1,5 @@
 function solution(n, lost, reserve) {
-  let dupArr = lost
-    .filter((ele) => reserve.includes(ele))
-    .sort((a, b) => a - b);
+  let dupArr = lost.filter((ele) => reserve.includes(ele));
     
   let newLost = lost
     .filter((ele) => !dupArr.includes(ele))
