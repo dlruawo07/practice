@@ -1,10 +1,3 @@
 function solution(absolutes, signs) {
-    var answer = 0;
-    
-    for (let i = 0; i < absolutes.length; i++) {
-        if (signs[i] === true) answer += absolutes[i];
-        if (signs[i] === false) answer -= absolutes[i];
-    }
-    
-    return answer;
+    return absolutes.reduce((acc, cur, i) => acc + (signs[i] ? cur : -cur), 0);
 }
