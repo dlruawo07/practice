@@ -1,21 +1,21 @@
 function solution(s) {
   let answer = s;
 
-  let arr = [
-    "zero",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-  ];
-
-  for (let i = 0; i < arr.length; i++)
-    answer = answer.replaceAll(arr[i], String(i));
+  let obj = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
+    
+  for (key in obj)
+    answer = answer.replaceAll(key, String(obj[key]));
 
   return Number(answer);
 }
