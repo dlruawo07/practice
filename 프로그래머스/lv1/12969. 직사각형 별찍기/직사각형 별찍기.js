@@ -1,9 +1,5 @@
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
-    const n = data.split(" ");
-    const a = Number(n[0]), b = Number(n[1]);
-    
-    for (let i = 0; i < b; i++) {
-        console.log(String('*').repeat(a));
-    }
+    const [n, m] = data.split(" ");
+    console.log("*".repeat(n).concat("\n").repeat(m));
 });
