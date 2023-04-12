@@ -1,11 +1,11 @@
 function solution(sizes) {
-  let _sizes = [...sizes];
-  let maxVal0 = null;
-  let maxVal1 = null;
-  for (let i = 0; i < _sizes.length; i++) {
-    _sizes[i].sort((a, b) => b - a);
-    maxVal0 = maxVal0 < _sizes[i][0] ? _sizes[i][0] : maxVal0;
-    maxVal1 = maxVal1 < _sizes[i][1] ? _sizes[i][1] : maxVal1;
+  let maxVal0 = 0;
+  let maxVal1 = 0;
+  for (let i = 0; i < sizes.length; i++) {
+    const [a, b] = sizes[i].sort((a, b) => b - a);
+    maxVal0 = Math.max(maxVal0, a);
+    maxVal1 = Math.max(maxVal1, b);
   }
+
   return maxVal0 * maxVal1;
 }
