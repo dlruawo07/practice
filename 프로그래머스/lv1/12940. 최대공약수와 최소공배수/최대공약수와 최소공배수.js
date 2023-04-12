@@ -1,11 +1,11 @@
 function getGCD(n, m) {
-    let gcd = 0;
-    let small = n > m ? m : n;
-    for (let i = 1; i <= small; i++) {
-        if (n % i === 0 && m % i === 0)
-            gcd = i;
+    let temp;
+    while (m !== 0) {
+        temp = n % m;
+        n = m;
+        m = temp;
     }
-    return gcd;
+    return n;
 }
 
 function getLCM(n, m) {
@@ -13,8 +13,7 @@ function getLCM(n, m) {
     if (m % n === 0) return m;
     
     let gcd = getGCD(n, m);
-    if (gcd !== 1) return n * m / gcd;
-    return n * m;
+    return n * m / gcd;
 }
 
 function solution(n, m) {
