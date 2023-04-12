@@ -6,7 +6,7 @@ function solution(new_id) {
   if (answer.length === 0) answer = "a";
   if (answer.length >= 16) answer = answer.slice(0, 15).replace(/\.$/, "");
   let len = answer.length;
-  if (len <= 2) answer = answer + answer[len - 1].repeat(3 - len);
+  if (len <= 2) answer = answer.padEnd(3, answer[len - 1]);
 
   return answer;
 }
