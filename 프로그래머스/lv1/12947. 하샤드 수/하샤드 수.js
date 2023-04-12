@@ -5,5 +5,5 @@ function solution(x) {
         sum += Math.floor(temp % 10);
         temp /= 10;
     }
-    return (x % sum == 0) ? true : false;
+    return x % sum == 0;
 }
