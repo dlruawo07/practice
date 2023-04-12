@@ -1,20 +1,19 @@
-function isLowerCase(s) {
-    return s >= 'a' && s <= 'z';
-}
-
-function isUpperCase(s) {
-    return s >= 'A' && s <= 'Z';
-}
-
 function solution(s, n) {
-    var answer = '';
-    for (let i = 0; i < s.length; i++) {
-        let newAscii = s.charCodeAt(i) + n;
-        if ((isLowerCase(s[i]) && newAscii > 122) || (isUpperCase(s[i]) && newAscii > 90))
-            newAscii -= 26;
-        let letter = String.fromCharCode(newAscii);
-        if (isLowerCase(letter) || isUpperCase(letter)) answer += letter;
-        else answer += s[i];
+  let answer = "";
+
+  for (let i = 0; i < s.length; i++) {
+    let ascii = s.charCodeAt(i);
+    if (ascii === 32) {
+      answer += " ";
+    } else {
+      let newAscii = ascii + n;
+      if (ascii <= 90 && newAscii > 90)
+        newAscii -= 26;
+      else if (ascii <= 122 && newAscii > 122)
+        newAscii -= 26;
+      answer += String.fromCharCode(newAscii);
     }
-    return answer;
+  }
+
+  return answer;
 }
