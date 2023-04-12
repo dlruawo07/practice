@@ -1,3 +1,8 @@
 function solution(n) {
-    return Number(String(n).split("").sort((a, b) => b - a).join(""));
+  const digits = [];
+  while (n > 0) {
+    digits.push(n % 10);
+    n = Math.floor(n / 10);
+  }
+  return Number(digits.sort((a, b) => b - a).join(''));
 }
