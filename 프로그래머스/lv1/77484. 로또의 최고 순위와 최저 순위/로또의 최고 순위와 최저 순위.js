@@ -7,8 +7,8 @@ function solution(lottos, win_nums) {
 
   const rank = [6, 5, 4, 3, 2];
 
-  let maxMatch = rank.indexOf(max) !== -1 ? rank.indexOf(max) + 1 : 5 + 1;
-  let minMatch = rank.indexOf(min) !== -1 ? rank.indexOf(min) + 1 : 5 + 1;
+  let maxMatch = rank.indexOf(max) !== -1 ? rank.indexOf(max) + 1 : 6;
+  let minMatch = rank.indexOf(min) !== -1 ? rank.indexOf(min) + 1 : 6;
 
   return [maxMatch, minMatch];
 }
